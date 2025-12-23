@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Professional Business Ideas Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* PROFESSIONAL THEME STYLING (Derived from Design Guidelines) */
+        /* Base Styles: Light/Professional Look */
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8; /* Light gray background */
+            color: #2c3e50; /* Dark text */
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            padding-top: 70px; /* Space for the fixed header */
+        }
+
+        /* Professional Header */
+        header {
+            background: linear-gradient(135deg, #0a3d62, #3c6382); /* Blue Gradient */
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Fixed header for in-page navigation */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content Container Adjustments */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Idea Section (The Card) */
+        .idea-section {
+            background: #ffffff; /* White card background */
+            padding: 40px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Stronger, modern shadow */
+            border-top: 5px solid #7b4397; /* Accent color bar */
+            min-height: auto;
+        }
+
+        .idea-section h2 {
+            font-size: 2.5rem; /* Larger, using display font */
+            color: #0a3d62; /* Dark blue heading */
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        h3.section-heading {
+            font-size: 1.6rem;
+            color: #0a3d62;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid #7b4397;
+            padding-left: 15px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Sub-sections (Problem, Solution, Tech Stack) */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .content-card {
+            background: #f9fcff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #3c6382;
+        }
+        .content-card h4 {
+            color: #7b4397;
+            margin-top: 0;
+            font-size: 1.2rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .content-card ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Media Styling */
+        .media-heading {
+            font-size: 1.4rem;
+            color: #7b4397;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #7b4397;
+            padding-left: 10px;
+        }
+        .media-container {
+            margin: 20px 0 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Placeholder style to clearly show where images are missing */
+        .image-placeholder {
+            width: 100%;
+            height: 300px; /* Standard height for visibility */
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            border: 2px dashed #7b4397;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .media-container img,
+        .media-container video {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        /* Features List */
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .features-list li {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 6px;
+            position: relative;
+            padding-left: 40px;
+            font-weight: 500;
+        }
+        .features-list li::before {
+            content: '✓';
+            color: #7b4397;
+            font-weight: bold;
+            position: absolute;
+            left: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Impact/Value Proposition Banner */
+        .impact-banner {
+            background: linear-gradient(90deg, #7b4397, #0a3d62);
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .impact-banner h4 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0a3d62;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .checkmark-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checkmark-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.checkmark-list li::before {
+    content: "✔"; /* Unicode checkmark */
+    position: absolute;
+    left: 0;
+    color: #6a0dad; /* purple color to match your design */
+    font-size: 18px;
+    top: 0;
+}
+
+ .section-subheading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-dot {
+    color: #6a0dad; /* purple */
+    margin-right: 8px;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+
+ .idea-title-banner {
+    background-image: url("https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/cbb3868eb95d4d8ec4173448dc46a3fcb785db30/artisanai_room_visualization_concept.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Optional overlay to make text readable */
+.idea-title-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+}
+
+.idea-title-banner h2 {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    margin: 0;
+}
+
+.idea-title-banner.bookmap {
+    background-image: url("https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/ab91cf69561f991d794f8bc59b9913c88768f489/bookmap_fair_navigation_concept.png");
+}
+.idea-title-banner.tourism {
+    background-image: url("https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/b61578e2033e5de4a978276fd55c33cec152cdaf/hybrid_tourism_platform_concept.png");
+}
+
+.idea-title-banner.sports {
+    background-image: url("https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/45ef293d64983224df1537eb01f18be2e7240ce9/limitless_sports_platform_concept.png");
+}
+
+.idea-title-banner.skating {
+    background-image: url("https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/45ef293d64983224df1537eb01f18be2e7240ce9/roller_skating_venue_concept.png");
+}
+    
+    .word-limit {
+    color: #e74c3c;   /* red */
+    font-weight: 700; /* bold */
+}
+
+    </style>
+
+</head>
+<body data-theme="dark">
+
+    <header>
+        <h1>Portfolio Showcase</h1>
+        <nav>
+            
+<a href="#idea1">ArtisanAl</a>
+<a href="#idea2">BookMap</a>
+<a href="#idea3">Tourism</a>
+<a href="#idea4">Sports</a>
+<a href="#idea5">Skating</a>
+
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <section style="text-align: center; padding: 60px 20px; margin-bottom: 50px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);">
+            <h1 style="font-size: 3rem; margin-bottom: 15px; color: #0a3d62; font-family: 'Space Grotesk', sans-serif;">Five Innovative Business Ideas</h1>
+            <p style="font-size: 1.2rem; color: #555;">Innovative AI-powered solutions combining technology with creativity to transform market gaps across multiple sectors.</p>
+        </section>
+
+        <section class="idea-section">
+            
+
+<div class="idea-title-banner">
+    <h2 id="idea1">ArtisanAl – AI-Powered Furniture & Art Visualization</h2>
+</div>
+
+    <div class="content-grid">
+        <div class="content-card" style="border-left-color: #e74c3c;">
+            <h4>The Problem</h4>
+            <p>Customers struggle to visualize furniture in their homes, lack access to traditional artisans, and face overwhelming choices without guidance. Meanwhile, artisans struggle to find modern clientele and designers lack exposure.</p>
+        </div>
+        <div class="content-card">
+            <h4>The Solution</h4>
+            <p>An intelligent platform that uses AI to analyze room photos, auto-fill with furniture recommendations, and connect users with artisans, designers, and manufacturers through a unified marketplace.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Visualizations</h3>
+    <h4 class="media-heading">2D Concept Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/49ac62efa8e5922611ff75d7e9597bf69d8a1d9b/5.png"
+        alt="2D interface mockup showcasing the user experience and design language." />
+</div>
+    <h4 class="media-heading">3D Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/bf61331b0a18842c02ee14e410e512b5478bb197/4.png"
+        alt="3D interface Visualization." />
+
+<h4 class="media-heading">Video Demo</h4>
+<div class="media-container">
+    <video controls preload="metadata">
+        <source src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/2db95b44b9c4ec7c120fb43fa9dbe2c774f627cc/1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; font-size: 0.9em; padding: 10px 0; color: #555;">
+        Experience the tech-enhanced vision brought to life.
+    </p>
+</div>
+
+    <h3 class="section-heading">Key Features</h3>
+    <ul class="features-list">
+        <li><strong>AI Room Analysis:</strong> Detects space dimensions, layout, colors, lighting, and style from uploaded photos.</li>
+        <li><strong>Auto-Visualization:</strong> Automatically fills rooms with suitable furniture and art in 2D & 3D.</li>
+        <li><strong>Smart Recommendations:</strong> AI recommends items based on style, budget, room function, and preferences.</li>
+        <li><strong>Alternative Options:</strong> Toggle colors, materials, price ranges, and artisan vs industrial options.</li>
+        <li><strong>Custom Requests:</strong> Request bespoke designs from designers and craftsmen.</li>
+        <li><strong>Unified Marketplace:</strong> Onboard artisans, designers, manufacturers, and galleries.</li>
+        <li><strong>Order & Deliver:</strong> Visualize, order, and receive furniture delivered right to your doorstep.</li>
+    </ul>
+
+
+    <h3 class="section-heading">Existing Competitors</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Houzz</h4>
+            <ul>
+                <li>Home design platform with product marketplace and visualization tools</li>
+                <li><span class="word-limit">Limitations: Limited Al capabilities, no artisan focus, primarily Western-centrice designs</li>
+
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>IKEA Place</h4>
+            <ul>
+                <li>AR app for visualizing IKEA furniture in your space</li>
+                <li><span class="word-limit">Limitations: Only IKEA products, no marketplace for other sellers, no custom design optioins</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Modsy</h4>
+            <ul>
+                <li>Online interior design service with 3D room visualization</li>
+                <li><span class="word-limit">Limitations: Expensive subscription model, no artisan marketplace, limited to US market</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Wayfair</h4>
+            <ul>
+                <li>Large e-commerce furniture platform with AR features</li>
+                <li><span class="word-limit">Limitations: No Al-powered room analysis, no artisan support, overwhelming product selection without personalization</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Business Model & Tech</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Revenue Model</h4>
+            <ul>
+                <li>10-20% commission on sales</li>
+                <li>Subscription plans for creators</li>
+                <li>Custom design fees, AI visualization credits</li>
+                <li>Advertising</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>Room segmentation AI, Object detection</li>
+                <li>2D & 3D generation</li>
+                <li>Web platform, Mobile apps (iOS/Android)</li>
+            </ul>
+        </div>
+          <div class="content-card">
+            <h4>Target Market</h4>
+            <ul>
+                <li>Homeowners & renters</li>
+                <li>Interior design enthusiasts</li>
+                <li>Traditional artisans, Furniture manufacturers</li>
+                <li>Art galleries</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Our Competitive Advantages</h3>
+<div class="content-grid">
+    <div class="content-card">
+        <ul class="advantages-list checkmark-list">
+            <li>AI-powered automatic room analysis and furniture placement – no competitors offer this level of automation</li>
+            <li>Unified marketplace connecting artisans, designers, and manufacturers in one platform</li>
+            <li>Focus on Middle Eastern traditional arts and craftsmanship – an underserved market</li>
+            <li>Both 2D and 3D visualization from a single photo upload</li>
+            <li>Custom design requests directly to craftsmen – bridging traditional skills with modern commerce</li>
+            <li>Price range filtering across artisan and industrial options for all budgets</li>
+            <li>No existing platform combines AI visualization with a marketplace that supports traditional artisans in the Middle East</li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="impact-banner">
+        <h4>Unique Value Proposition</h4>
+        <p>First unified ecosystem merging AI visualization + marketplace + artisan support, focusing on Middle Eastern traditional arts.</p>
+    </div>
+
+        </section>
+
+        <section class="idea-section">
+            
+<div class="idea-title-banner bookmap">
+    <h2 id="idea2">BookMap – AI-Powered Interactive Book Gallery App</h2>
+</div>
+
+    <div class="content-grid">
+        <div class="content-card" style="border-left-color: #e74c3c;">
+            <h4>The Problem</h4>
+            <p>Book fair attendees struggle to find specific books among thousands of booths. Small publishers lack exposure, and visitors can't access books after events end.</p>
+        </div>
+        <div class="content-card">
+            <h4>The Solution</h4>
+            <p>An app with AI-powered book search, interactive booth navigation, location-aware event mode, and year-round delivery options for all participating publishers.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Visualizations</h3>
+    <h4 class="media-heading">2D Concept Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/ad9a4f3f8d1b983296348e87e755002a0bae6732/6.png"
+        alt="2D interface mockup showcasing the user experience and design language." />
+</div>
+    <h4 class="media-heading">3D Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/ad9a4f3f8d1b983296348e87e755002a0bae6732/7.png"
+        alt="3D interface Visualization." />
+
+<h4 class="media-heading">Video Demo</h4>
+<div class="media-container">
+    <video controls preload="metadata">
+        <source src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; font-size: 0.9em; padding: 10px 0; color: #555;">
+        Experience the tech-enhanced vision brought to life.
+    </p>
+</div>
+
+    <h3 class="section-heading">Key Features</h3>
+    <ul class="features-list">
+        <li><strong>Al Book Search:</strong> Search by title, author, genre, or keywords with personalized recommendations.</li>
+        <li><strong>Interactive Map:</strong> Locate books by booth/shelf with step-by-step navigation a n d optional AR overlay.</li>
+        <li><strong>Event Mode:</strong> Auto-switches to fair mode based on location with live offers and booth updates.</li>
+        <li><strong>Delivery Service:</strong> National and international delivery with pre-order options.</li>
+        <li><strong>Year-Round Access:</strong> Browse and purchase from participating publishers anytime.</li>
+        <li><strong>Publisher Dashboard:</strong> Upload inventory, manage offers, and view analytics.</li>
+    </ul>
+
+
+    <h3 class="section-heading">Existing Competitors</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Goodreads</h4>
+            <ul>
+                <li>Social cataloging website for books with recommendations</li>
+                <li><span class="word-limit">Limitations: No book fair integration, no navigation features, no purchasing capability</li>
+
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Amazon Kindle</h4>
+            <ul>
+                <li>E-book marketplace with vast selection</li>
+                <li><span class="word-limit">Limitations: No physical book fair support, no indoor navigation, focuses on digital books</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Book Fair Apps</h4>
+            <ul>
+                <li>Individual fair apps created by organizers</li>
+                <li><span class="word-limit">Limitations: Only work during events, no year-round access, poor search functionality, no delivery options</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>LibraryThing</h4>
+            <ul>
+                <li>Social cataloging and book database</li>
+                <li><span class="word-limit">Limitations: No marketplace, no fair integration, limited to cataloging only</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Business Model & Tech</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Revenue Model</h4>
+            <ul>
+                <li>Publisher participation fees</li>
+                <li>Featured promotions</li>
+                <li>Delivery fees, Premium subscriptions</li>
+                <li>Analytics reports</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>Al recommendation engine, Indoor navigation</li>
+                <li>AR guidance</li>
+                <li>ISBN scanning, Cloud database</li>
+            </ul>
+        </div>
+          <div class="content-card">
+            <h4>Target Market</h4>
+            <ul>
+                <li>Book enthusiasts</li>
+                <li>Students & researchers</li>
+                <li>Publishers large and small, Niche/underrepresented publishers</li>
+                <li>Literary tourists</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Our Competitive Advantages</h3>
+<div class="content-grid">
+    <div class="content-card">
+        <ul class="advantages-list checkmark-list">
+            <li>First platform to bridge physical book fairs with year-round digital access</li>
+            <li>Al-powered book search with personalized recommendations based on reading preferences</li>
+            <li>Indoor navigation with AR overlay to locate specific books and booths</li>
+            <li>Event mode that automatically activates based on location during fairs</li>
+            <li>Gives visibility to small and underrepresented publishers who struggle at traditional fairs</li>
+            <li>National and international delivery extends book fair reach globally</li>
+            <li>Book fairs remain largely offline experiences with no unified digital platform. Visitors struggle to find specific books, small publishers get overlooked, and once the fair ends, access to those publishers disappears. No platform currently solves all these problems together.</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="impact-banner">
+        <h4>Unique Value Proposition</h4>
+        <p>Transforms traditional book fairs into digital, interactive, globally accessible experiences while promoting underrepresented publishers.</p>
+    </div>
+
+        </section>
+
+        <section class="idea-section">
+            
+<div class="idea-title-banner tourism">
+    <h2 id="idea3">Hybrid Tourism Platform – AI-Powered Physical & Virtual Experiences</h2>
+</div>
+
+    <div class="content-grid">
+        <div class="content-card" style="border-left-color: #e74c3c;">
+            <h4>The Problem</h4>
+            <p>Travelers seek all-in-one booking but must use separate apps for guides, hotels, and transport. Virtual tourism is underutilized, and student workforce potential remains untapped.</p>
+        </div>
+        <div class="content-card">
+            <h4>The Solution</h4>
+            <p>An AI platform that automatically bundles guides, drivers, translators, hotels, and virtual experiences based on budget, preferences, and schedule with integrated student workforce.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Visualizations</h3>
+    <h4 class="media-heading">2D Concept Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/45ef293d64983224df1537eb01f18be2e7240ce9/8.png"
+        alt="2D interface mockup showcasing the user experience and design language." />
+</div>
+    <h4 class="media-heading">3D Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/45ef293d64983224df1537eb01f18be2e7240ce9/9.png"
+        alt="3D interface Visualization." />
+
+<h4 class="media-heading">Video Demo</h4>
+<div class="media-container">
+    <video controls preload="metadata">
+        <source src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/45ef293d64983224df1537eb01f18be2e7240ce9/3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; font-size: 0.9em; padding: 10px 0; color: #555;">
+        Experience the tech-enhanced vision brought to life.
+    </p>
+</div>
+
+    <h3 class="section-heading">Key Features</h3>
+    <ul class="features-list">
+        <li><strong>Al Service Matching:</strong> Automatically selects and bundles all travel services based on preferences.</li>
+        <li><strong>Virtual & VR Tours:</strong> Access museums, galleries, and sites online with interactive experiences.</li>
+        <li><strong>Student Integration:</strong> Students act as translators and co-guides for flexible service delivery.</li>
+        <li><strong>Itinerary Optimization:</strong> Al optimizes timing, costs, and hybrid experiences.</li>
+        <li><strong>Ratings & Trust:</strong> Verified profiles, rating system, and Al fraud detection.</li>
+        <li><strong>Low-Season Revenue:</strong> Virtual content and dynamic pricing for year-round engagement.</li>
+    </ul>
+
+
+    <h3 class="section-heading">Existing Competitors</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>TripAdvisor</h4>
+            <ul>
+                <li>Travel platform for reviews, bookings, and recommendations</li>
+                <li><span class="word-limit">Limitations: No Al bundling, no virtual tours, separate bookings for each service required</li>
+
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Airbnb Experiences</h4>
+            <ul>
+                <li>Local experiences and tours marketplace</li>
+                <li><span class="word-limit">Limitations: Limited to physical experiences, no VR options, no integrated transport or guide bundling</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>GetYour Guide</h4>
+            <ul>
+                <li>Tours and activities booking platform</li>
+                <li><span class="word-limit">Limitations: No Al personalization, no student workforce, no virtual experiences</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Google Arts & Culture</h4>
+            <ul>
+                <li>Virtual museum tours and cultural content</li>
+                <li><span class="word-limit">Limitations: No booking capabilities, no physical service integration, purely virtual content</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Business Model & Tech</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Revenue Model</h4>
+            <ul>
+                <li>Booking commissions</li>
+                <li>Virtual experience tickets</li>
+                <li>Al bundling premiums, Partnership revenue sharing</li>
+                <li>Advertising</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>Al recommendation engine, VR/360° integration</li>
+                <li>Booking APIs</li>
+                <li>Payment processing, Partner dashboards</li>
+            </ul>
+        </div>
+          <div class="content-card">
+            <h4>Target Market</h4>
+            <ul>
+                <li>International tourists</li>
+                <li>Remote travelers</li>
+                <li>Language students, Local guides & drivers</li>
+                <li>Hotels & museums</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Our Competitive Advantages</h3>
+<div class="content-grid">
+    <div class="content-card">
+        <ul class="advantages-list checkmark-list">
+            <li>Al automatically bundles guides, drivers, translators, and hotels into one optimized package</li>
+            <li>Hybrid model combining physical tourism with VR/virtual experiences for remote access</li>
+            <li>Student integration creates affordable workforce while providing real-world experience</li>
+            <li>Year-round revenue through virtual tours during low tourist seasons</li>
+            <li>Single platform replaces multiple apps for complete travel planning</li>
+            <li>Al fraud detection and verified profiles ensure trust and safety</li>
+            <li>Travelers currently use 5-7 different apps to plan trips. No platform offers Al-driven bundling of all services with virtual alternatives. The student workforce potential in tourism is completely untapped, and virtual tourism remains disconnected from physical travel planning.</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="impact-banner">
+        <h4>Unique Value Proposition</h4>
+        <p>The only platform combining AI personalization, hybrid tourism, student integration, and all-in-one service bundling.</p>
+    </div>
+
+        </section>
+
+        <section class="idea-section">
+            
+<div class="idea-title-banner sports">
+    <h2 id="idea4">Limitless Sports Platform – AI-Powered Pay-Per-Session Sports</h2>
+</div>
+
+    <div class="content-grid">
+        <div class="content-card" style="border-left-color: #e74c3c;">
+            <h4>The Problem</h4>
+            <p>Most sports platforms are subscription-based with limited variety. Schools struggle to offer multi-sport programs, and rare/niche sports lack accessible platforms.</p>
+        </div>
+        <div class="content-card">
+            <h4>The Solution</h4>
+            <p>An open marketplace for all sports with flexible pay-per-use, AI recommendations, school dashboards, and seasonal Mini Polympics tournaments.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Visualizations</h3>
+    <h4 class="media-heading">2D Concept Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/10.png"
+        alt="2D interface mockup showcasing the user experience and design language." />
+</div>
+    <h4 class="media-heading">3D Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/11.png"
+        alt="3D interface Visualization." />
+
+<h4 class="media-heading">Video Demo</h4>
+<div class="media-container">
+    <video controls preload="metadata">
+        <source src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; font-size: 0.9em; padding: 10px 0; color: #555;">
+        Experience the tech-enhanced vision brought to life.
+    </p>
+</div>
+
+    <h3 class="section-heading">Key Features</h3>
+    <ul class="features-list">
+        <li><strong>Open Marketplace:</strong> Access physical, mind, hybrid, and emerging sports in one platform.</li>
+        <li><strong>Pay-Per-Use:</strong> One-time payments per session avoiding expensive subscriptions.</li>
+        <li><strong>Al Personalization:</strong> Recommends sports, trainers, and events based on preferences and skill.</li>
+        <li><strong>School Dashboard:</strong> Manage students, bookings, attendance, and performance monitoring.</li>
+        <li><strong>Mini Polympics:</strong> Seasonal multi-sport tournaments with sponsorships.</li>
+        <li><strong>Business Partnerships:</strong> Integrated sports shops, equipment brands, and nutrition stores.</li>
+    </ul>
+
+
+    <h3 class="section-heading">Existing Competitors</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>ClassPass</h4>
+            <ul>
+                <li>Subscription-based fitness class marketplace</li>
+                <li><span class="word-limit">Limitations: Subscription-only model, limited sport variety, no school integration, Western market focus</li>
+
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Mindbody</h4>
+            <ul>
+                <li>Wellness and fitness booking platform</li>
+                <li><span class="word-limit">Limitations: Focuses on gyms/studios, no rare sports, no Al recommendations, subscription-based</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Local Sports Clubs</h4>
+            <ul>
+                <li>Traditional sports clubs with membership models</li>
+                <li><span class="word-limit">Limitations: Single sport focus, expensive memberships, limited accessibility, no technology integration</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>School Sports Programs</h4>
+            <ul>
+                <li>In-school physical education</li>
+                <li><span class="word-limit">Limitations: Limited sport variety, no external booking, no performance tracking, no flexibility</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Business Model & Tech</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Revenue Model</h4>
+            <ul>
+                <li>Individual session fees</li>
+                <li>School packages</li>
+                <li>Club commissions, Tournament entry fees</li>
+                <li>Sponsorships</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>Mobile & web apps, Al recommendation system</li>
+                <li>Dynamic pricing</li>
+                <li>Trainer verification, Analytics dashboard</li>
+            </ul>
+        </div>
+          <div class="content-card">
+            <h4>Target Market</h4>
+            <ul>
+                <li>Students & fitness enthusiasts</li>
+                <li>Schools & institutions</li>
+                <li>Sports clubs & trainers, Corporate team-building groups</li>
+                <li>Niche sport seekers</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Our Competitive Advantages</h3>
+<div class="content-grid">
+    <div class="content-card">
+        <ul class="advantages-list checkmark-list">
+            <li>Pay-per-session model eliminates expensive subscriptions - access any sport affordably</li>
+            <li>Includes rare and mind sports (chess, esports, archery) not available on other platforms</li>
+            <li>School dashboard for managing student sports activities and performance</li>
+            <li>Al recommends sports based on interests, physical abilities, and goals</li>
+            <li>Mini Polympics tournaments create engagement and sponsorship opportunities</li>
+            <li>First comprehensive sports marketplace targeting the Middle East market</li>
+            <li>The Middle East lacks a unified sports platform. Existing options are subscription-based and limited in variety. Schools struggle to offer diverse sports programs, and niche sports enthusiasts have no centralized platform. Pay-per-use sports access is virtually non-existent.</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="impact-banner">
+        <h4>Unique Value Proposition</h4>
+        <p>Untapped market in the Middle East with AI-driven personalization, rare/mind sports, and Mini Polympics events.</p>
+    </div>
+
+        </section>
+
+        <section class="idea-section">
+            
+<div class="idea-title-banner skating">
+    <h2 id="idea5">Roller-Skating Experience – Tech-Enhanced Themed Entertainment Venue</h2>
+</div>
+
+    <div class="content-grid">
+        <div class="content-card" style="border-left-color: #e74c3c;">
+            <h4>The Problem</h4>
+            <p>The Middle East lacks indoor and creatively themed entertainment options. Existing options don't offer experiential environments or retro-themed activities.</p>
+        </div>
+        <div class="content-card">
+            <h4>The Solution</h4>
+            <p>A standalone round-shaped venue with interactive bracelets, rotating themes, big-screen dance competitions, photo experiences, and family-friendly entertainment.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Visualizations</h3>
+    <h4 class="media-heading">2D Concept Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/12.png"
+        alt="2D interface mockup showcasing the user experience and design language." />
+</div>
+    <h4 class="media-heading">3D Visualization</h4>
+    <div class="media-container">
+    <img
+        src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709/13.png"
+        alt="3D interface Visualization." />
+
+<h4 class="media-heading">Video Demo</h4>
+<div class="media-container">
+    <video controls preload="metadata">
+        <source src="https://raw.githubusercontent.com/basmaqenab/ideas_portfolio_/02eb3c710f90ecebc6b49bdb2eb8f9cf28511709//5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; font-size: 0.9em; padding: 10px 0; color: #555;">
+        Experience the tech-enhanced vision brought to life.
+    </p>
+</div>
+
+    <h3 class="section-heading">Key Features</h3>
+    <ul class="features-list">
+        <li><strong>Interactive Bracelets:</strong> Track time, vibrate at session end, participate in games, and earn rewards.</li>
+        <li><strong>Seasonal Themes:</strong> 80s/90s retro, Barbie, Squid Game, K-pop, holiday specials, and more.</li>
+        <li><strong>Dance Competitions:</strong> Big-screen guided dances with bracelet tracking for rewards.</li>
+        <li><strong>Photo & Video Stations:</strong> Staff on skates capture moments and sell digital packages.</li>
+        <li><strong>Jukebox Requests:</strong> Guests pay to request songs, driving engagement.</li>
+        <li><strong>VIP Experiences:</strong> Premium packages with exclusive access and amenities.</li>
+    </ul>
+
+
+    <h3 class="section-heading">Existing Competitors</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Ice Skating Rinks</h4>
+            <ul>
+                <li>Traditional ice skating venues in malls</li>
+                <li><span class="word-limit">Limitations: Expensive to operate, generic experience, no themed entertainment,limited activities</li>
+
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Family Entertainment Centers</h4>
+            <ul>
+                <li>General family fun centers with various activities</li>
+                <li><span class="word-limit">Limitations: No skating focus, generic themes, no interactive technology, fragmented experiences</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Roller World (US/Europe)</h4>
+            <ul>
+                <li>Roller skating rinks in Western markets</li>
+                <li><span class="word-limit">Limitations: Not present in Middle East, basic facilities, limited themed experiences</li>
+           </ul>
+        </div>
+        <div class="content-card">
+            <h4>Theme Parks</h4>
+            <ul>
+                <li>Large-scale entertainment destinations</li>
+                <li><span class="word-limit">Limitations: Very expensive, require travel, no regular skating activities, overwhelmingly large</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Business Model & Tech</h3>
+    <div class="content-grid">
+        <div class="content-card">
+            <h4>Revenue Model</h4>
+            <ul>
+                <li>Entry fees (30-min slots)</li>
+                <li>Food & beverage</li>
+                <li>Photo/video packages</li>
+                <li>Merchandise, Memberships, Events</li>
+            </ul>
+        </div>
+        <div class="content-card">
+            <h4>Tech Stack</h4>
+            <ul>
+                <li>Bracelet tracking system, Reservation booking</li>
+                <li>LED screens</li>
+                <li>CCTV security, POS integration</li>
+            </ul>
+        </div>
+          <div class="content-card">
+            <h4>Target Market</h4>
+            <ul>
+                <li>Families with children</li>
+                <li>Teens & young adults</li>
+                <li>School groups, Corporate events</li>
+                <li>Tourists & expats</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Our Competitive Advantages</h3>
+<div class="content-grid">
+    <div class="content-card">
+        <ul class="advantages-list checkmark-list">
+            <li>First tech-enhanced roller skating venue in the Middle East - complete blue ocean</li>
+            <li>Interactive bracelet system for gamification, time tracking, and rewards</li>
+            <li>Rotating seasonal themes keep experience fresh and drive repeat visits</li>
+            <li>Dance competitions and group activities create community engagement</li>
+            <li>Photo/video services create shareable content and additional revenue</li>
+            <li>Scalable model for expansion across maior Middle Eastern cities</li>
+            <li>The Middle East has virtually no dedicated roller skating entertainment venues. Existing entertainment options are either generic family centers or expensive theme parks. There's no venue combining skating with themed experiences, technology integration, and community-building activities.</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="impact-banner" style="background: linear-gradient(90deg, #d82346, #e74c3c);">
+        <h4>Unique Value Proposition</h4>
+        <p>First-mover advantage in the Middle East with scalable entertainment brand potential for regional expansion across major cities.</p>
+    </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Business Portfolio. Designed with principles from Inter & Space Grotesk typography.</p>
+    </footer>
+
+
+</body>
+</html>
